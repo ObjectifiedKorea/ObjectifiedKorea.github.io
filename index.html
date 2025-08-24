@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="ko">
-<style>
+<html lang="ko"> 
+<style>    
     #title {
         background-color: aqua;
-        height: 170px;
+        height: 200px;
+        width: 102%;
+        margin-left: -11px;
+        margin-top: -10px;
     }
 
     #menu {
-        background-color: aquamarine;
+        background-color: rgb(158, 158, 158);
         height: 50px;
+        width: 102%;
+        margin-left: -11px;
     }
 
     #submenu {
-        float: left;
+        float: left;text-align:center;line-height:50px;font-size:35px;
+      color: rgb(138, 83, 0);
         width: 16%;
     }
 
     #soon {
+        text-align: center;line-height:50px;font-size:20px;
         background-color: burlywood;
         height: 50px;
+        width: 102%;
+        margin-left: -11px;
     }
 
     #startepi {
+        text-align: center;line-height:100px;font-size:20px;
         background-color: chartreuse;
         width: 250px;
         height: 100px;
@@ -30,6 +40,7 @@
     }
 
     #newepi {
+        text-align: center;line-height:100px;font-size:20px;
         background-color: chartreuse;
         width: 250px;
         height: 100px;
@@ -38,6 +49,7 @@
     }
 
     #now {
+        text-align: center;line-height:100px;font-size:20px;
         background-color: rgb(141, 208, 74);
         width: 250px;
         height: 100px;
@@ -54,10 +66,10 @@
     <link rel="stylesheet" href="./css/font.css" type="text/css">
     <title>홈 |오브젝티파이드|</title>
 </head>
-<body>
+<body style="background-image:url('https://i.imgur.com/y7uFiOm.png')">
     <div id="title">오브젝티파이드</div>
     <div id="menu">
-        <div id="submenu">홈</div>
+        <div id="submenu"><a onclick="location.href='index.html';" style=cursor:pointer;>홈</a></div>
         <div id="submenu">저장소</div>
         <div id="submenu">캐릭터</div>
         <div id="submenu">정보</div>
@@ -65,17 +77,17 @@
         <div id="submenu">누즈</div>
     </div>
     <div id="soon">
-        대충 이때 나올예정
+        <div>에피소드.84 흡혈귀의 계략 : 피날레가 9월6일에 출시됩니다! 기대해주세요!</div>
     </div>
     <div id="area">
         <div id="startepi">
-            처음부터 보기
+            <div><a onclick="location.href='./Episode/Cover page.html';" style=cursor:pointer;>에피소드 처음부터 보기</div>
         </div>
         <div id="newepi">
-            새 애피소드
+            <div><a onclick="location.href='./Episode/Episode 83.html';" style=cursor:pointer;>새 에피소드 보기</a></div>
         </div>
         <div id="now">
-            최근
+           <div><a onclick="location.href='./Episode/Episode 83.html';" style=cursor:pointer;>엑스트라 보기</a></div>
         </div>
     </div>
 </body>
