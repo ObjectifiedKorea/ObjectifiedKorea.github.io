@@ -2,23 +2,23 @@
 <html lang="ko"> 
 <style>    
     #title {
-        background-color: aqua;
-        height: 200px;
-        width: 102%;
-        margin-left: -11px;
-        margin-top: -10px;
+        background-color: rgb(0, 0, 0);
+        height: 210px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #menu {
         background-color: rgb(158, 158, 158);
         height: 50px;
-        width: 102%;
-        margin-left: -11px;
+        width: 100%;
     }
 
     #submenu {
         float: left;text-align:center;line-height:50px;font-size:35px;
-      color: rgb(138, 83, 0);
+        color: rgb(138, 83, 0);
         width: 16%;
     }
 
@@ -26,8 +26,7 @@
         text-align: center;line-height:50px;font-size:20px;
         background-color: burlywood;
         height: 50px;
-        width: 102%;
-        margin-left: -11px;
+        width: 100%;
     }
 
     #startepi {
@@ -37,6 +36,7 @@
         height: 100px;
         margin-left: 20px;
         margin-top: 20px;
+        border-style: solid;
     }
 
     #newepi {
@@ -46,6 +46,7 @@
         height: 100px;
         margin-left: 20px;
         margin-top: 20px;
+        border-style: solid;
     }
 
     #now {
@@ -55,40 +56,161 @@
         height: 100px;
         margin-left: 20px;
         margin-top: 20px;
+        border-style: solid;
+    }
+
+    #submenu > a {
+        cursor:pointer;
+    }
+
+    #Under {
+        background-color: rgb(94, 94, 94);
+        width: 100%;
+        height: 200px;
+        margin-top: 100px;
     }
 
     body {
         font-family: Cafe24Ssurround;
+        margin: 0;
+    }
+
+    #nooz-list {
+        margin: auto;
+        width: 800px;
+        height: 900px;
+        background-color: rgb(59, 55, 55);
+    }
+
+    #nooz-top {
+        width: 800px;;
+        height: 50px;
+        background-color: rgb(32, 31, 31);
+    }
+
+    #nooz-contents {
+        margin: auto;
+        margin-top: 20px;
+        width: 700px;
+        height: 200px;
+        border-style: solid;
+        border-color: gray;
+        border-width: 2px;
+    }
+
+    #nooz-list-title {
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    #nooz-list-content {
+        font-size: 15px;
     }
 </style>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/font.css" type="text/css">
-    <title>홈 |오브젝티파이드|</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title id="title-name">홈 |오브젝티파이드|</title>
 </head>
 <body style="background-image:url('https://i.imgur.com/y7uFiOm.png')">
-    <div id="title">오브젝티파이드</div>
+    <div id="title">
+        <img src="./img/title/OBJECTIFIED.png">
+    </div>
     <div id="menu">
-        <div id="submenu"><a onclick="location.href='index.html';" style=cursor:pointer;>홈</a></div>
-        <div id="submenu">저장소</div>
-        <div id="submenu">캐릭터</div>
-        <div id="submenu">정보</div>
-        <div id="submenu">엑스트라</div>
-        <div id="submenu">누즈</div>
+        <div id="submenu"><a name="home">홈</a></div>
+        <div id="submenu"><a name="arc">저장소</a></div>
+        <div id="submenu"><a name="char">캐릭터</a></div>
+        <div id="submenu"><a name="info">정보</a></div>
+        <div id="submenu"><a name="ex">엑스트라</a></div>
+        <div id="submenu"><a name="nooz">누즈</a></div>
     </div>
-    <div id="soon">
-        <div>에피소드.84 흡혈귀의 계략 : 피날레가 9월6일에 출시됩니다! 기대해주세요!</div>
+    <div id="home">
+        <div id="soon">
+            <div>에피소드.84 흡혈귀의 계략 : 피날레가 9월6일에 출시됩니다! 기대해주세요!</div>
+        </div>
+        <div id="area">
+            <div id="startepi">
+                <div><a onclick="location.href='./Episode/Cover page.html';" style=cursor:pointer;>에피소드 처음부터 보기</a></div>
+            </div>
+            <div id="newepi">
+                <div id="new-epi-btn"><a style=cursor:pointer;>새 에피소드 보기</a></div>
+            </div>
+            <div id="now">
+               <div><a onclick="location.href='./Episode/Episode 83.html';" style=cursor:pointer;>엑스트라 보기</a></div>
+            </div>
+        </div>
     </div>
-    <div id="area">
-        <div id="startepi">
-            <div><a onclick="location.href='./Episode/Cover page.html';" style=cursor:pointer;>에피소드 처음부터 보기</div>
+
+    <div id="arc" hidden>
+            저장소 내용
+    </div>
+
+    <div id="char" hidden>
+        캐릭터 내용
+    </div>
+    
+    <div id="info" hidden>
+        정보 내용
+    </div>
+    
+    <div id="ex" hidden>
+        엑스트라 내용
+    </div>
+
+    <div id="nooz" hidden>
+        <div id="nooz-list">
+            <div id="nooz-top"><a style="font-size: 25px;line-height:50px;color: gray;margin-left: 10px;">오브젝티파이드 누즈, 업데이트 그 외</a></div>
+            <div id="nooz-contents">
+                <div>
+                    <img src="https://static.wixstatic.com/media/34e15c_ba0901923fdf4330819100d05bb8ece8~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_avif,quality_auto/34e15c_ba0901923fdf4330819100d05bb8ece8~mv2.webp"
+                        style="width: 300px; height: 200px; float: left; margin-right: 20px;">
+                    <div>
+                        <div id="nooz-list-title"><a style="color: aliceblue;">에피소드 출시 8/23/25 - 원하는 것들과 필요한 것들</a></div>
+                        <div id="nooz-list-content"><a style="color: aliceblue;">첫번째 연락이 나왔습니다! 클릭하여 읽어보세요! 페인킬러와 포씰 관련된 새로운 굿즈를 출시</a></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="newepi">
-            <div><a onclick="location.href='./Episode/Episode 83.html';" style=cursor:pointer;>새 에피소드 보기</a></div>
-        </div>
-        <div id="now">
-           <div><a onclick="location.href='./Episode/Episode 83.html';" style=cursor:pointer;>엑스트라 보기</a></div>
-        </div>
+    </div>
+
+    <div id="new-epi" hidden>
+        <!-- <iframe src="./Episode/Episode 83.html" width="100%" height="800px" style="border:none;" ></iframe> -->
+        <div id="new-epi-content"></div>
+    </div>
+
+    <div id="Under">
+        대충 아래
     </div>
 </body>
+<script>
+    // 모든 섹션 id 배열
+    const sections = ["home", "arc", "char", "info", "ex", "nooz", "new-epi"];
+
+    // 메뉴 클릭 이벤트
+    $("#submenu > a").click(function() {
+        const name = $(this).attr("name");
+        sections.forEach(id => $("#" + id).attr("hidden", true));
+        $("#" + name).removeAttr("hidden");
+    });
+
+    // 새 에피소드 버튼 클릭 시 new-epi만 표시
+    $("#new-epi-btn").click(function(e) {
+        e.preventDefault();
+        sections.forEach(id => $("#" + id).attr("hidden", true));
+        $("#new-epi").removeAttr("hidden");
+    });
+
+    $(document).ready(function() {
+        $("#new-epi-btn").click(function(e) {
+            e.preventDefault();
+            sections.forEach(id => $("#" + id).attr("hidden", true));
+            $("#new-epi").removeAttr("hidden");
+            // HTML 파일 불러와서 삽입
+            $("#new-epi-content").load("./Episode/Episode 83.html");
+        });
+    });
+</script>
 </html>
