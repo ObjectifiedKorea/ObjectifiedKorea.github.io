@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <title>누즈 |오브젝트파이드|</title>
+</head>
+<style>
+    #nooz-top {
+        width: 800px;;
+        height: 50px;
+        background-color: rgb(32, 31, 31);
+    }
+
+    #nooz-list {
+        margin: auto;
+        width: 800px;
+        height: 900px;
+        background-color: rgb(59, 55, 55);
+    }
+
+    #nooz-contents {
+        margin: auto;
+        margin-top: 20px;
+        width: 700px;
+        height: 200px;
+        border-style: solid;
+        border-color: gray;
+        border-width: 2px;
+    }
+
+    #nooz-list-title {
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    #nooz-list-content {
+        font-size: 15px;
+    }
+
+    body {
+        font-family: Cafe24Ssurround;
+        margin: 0;
+    }
+</style>
+<body style="background-image:url('https://i.imgur.com/y7uFiOm.png')">
+    <div id="title-div"></div>
+    <div id="nooz">
+        <div id="nooz-list">
+            <div id="nooz-top"><a style="font-size: 25px;line-height:50px;color: gray;margin-left: 10px;">오브젝티파이드 누즈, 업데이트 그 외</a></div>
+            <div id="nooz-contents">
+                <div>
+                    <img src="https://static.wixstatic.com/media/34e15c_ba0901923fdf4330819100d05bb8ece8~mv2.png/v1/fill/w_454,h_341,fp_0.50_0.50,q_95,enc_avif,quality_auto/34e15c_ba0901923fdf4330819100d05bb8ece8~mv2.webp"
+                        style="width: 300px; height: 200px; float: left; margin-right: 20px;">
+                    <div>
+                        <div id="nooz-list-title"><a style="color: aliceblue;">에피소드 출시 8/23/25 - 원하는 것들과 필요한 것들</a></div>
+                        <div id="nooz-list-content"><a style="color: aliceblue;">첫번째 연락이 나왔습니다! 클릭하여 읽어보세요! 페인킬러와 포씰 관련된 새로운 굿즈를 출시</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-div"></div>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#title-div").load("./common/header.html");
+        $("#footer-div").load("./common/footer.html");
+    });
+</script>
+</html>

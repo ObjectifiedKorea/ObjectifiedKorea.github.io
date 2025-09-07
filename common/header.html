@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./css/font.css" type="text/css">
+
+<style>
+    #title {
+        background-color: rgb(0, 0, 0);
+        height: 210px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu {
+        background-color: rgb(158, 158, 158);
+        height: 50px;
+        width: 100%;
+    }
+
+    #submenu {
+        float: left;text-align:center;line-height:50px;font-size:35px;
+        color: rgb(138, 83, 0);
+        width: 16%;
+    }
+
+    #submenu > a {
+        cursor:pointer;
+    }
+
+    #title-img {
+        cursor: pointer;
+    }
+</style>
+
+<div id="title">
+    <img id="title-img" src="../img/title/OBJECTIFIED.png">
+</div>
+<div id="menu">
+    <div id="submenu"><a name="home" onclick="location.href='../index.html'">홈</a></div>
+    <div id="submenu"><a name="arc" onclick="location.href='../archive.html'">저장소</a></div>
+    <div id="submenu"><a name="char" onclick="location.href='../character.html'">캐릭터</a></div>
+    <div id="submenu"><a name="info" onclick="location.href='../info.html'">정보</a></div>
+    <div id="submenu"><a name="ex" onclick="location.href='../extra.html'">엑스트라</a></div>
+    <div id="submenu"><a name="nooz" onclick="location.href='../nooz.html'">누즈</a></div>
+</div>
+
+<script>
+    $("#title-img").click(function() {
+        location.href = '../index.html';
+    });
+</script>
